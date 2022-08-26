@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        int min = 1;
+        int max = 7;
+        int range = max - min + 1;
+
+        int Randnum = (int) ((Math.random() * range) + min);
+
+        System.out.println("\n\nNUMBER GUESSING GAME \n\n" + "Guess the number:");
+        Scanner scanner = new Scanner(System.in);
+        int Num = scanner.nextInt();
+
+        String result;
+        result = (Num == Randnum) ? "Jackpot! You got the Correct Number!" : "Wrong Number!\n" + " \nThe correct Number is \n" + Randnum;
+        System.out.println(result);
+
+    }
+}
