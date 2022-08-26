@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Colorgame {
+    
+    public void Startgame(){
+        int min = 1;
+        int max = 7;
+        int range = max-min+1;
+
+        int frstnum = (int)(Math.random()*range)+min;
+        int scndnum = (int)(Math.random()*range)+min;
+        int thrdnum = (int)(Math.random()*range)+min;
+
+        System.out.println("\n1stNum: " +frstnum);
+        System.out.println("\n2ndNum: " +scndnum);
+        System.out.println("\n3rdNum: " +thrdnum);
+
+        if (frstnum==scndnum && frstnum==thrdnum & scndnum==thrdnum){
+            System.out.println("\nJackpot!!!\n");
+        }
+
+        else if (frstnum == scndnum || frstnum == thrdnum || scndnum == thrdnum) {
+            System.out.println("\nClose One!\n");
+        }
+        else  {
+            System.out.println("\nTalo ka!! Bobo mo pusta pa!!\n");
+        }
+
+        System.out.println("Do you want to play again?\n" + "\nInput 1 to play || Input 2 to Quit");
+        Scanner scanner = new Scanner(System.in);
+        int NumIn = scanner.nextInt();
+
+        Colorgame Laroulit = new Colorgame();
+
+        if (NumIn == 1) {
+            Laroulit.Startgame();
+        }
+
+        else {
+            System.out.println("\nGoodbye!,Thank You for Playing!!");
+        }
+
+    }
+}
