@@ -74,23 +74,23 @@ public class App {
 
             System.out.println("\nInput your first order: ");
             String frstOrder = orderInput.next();
-            System.out.println("Input the price of your first order: ");
+            System.out.println("\nInput the price of your first order: ");
             Double frstorderprice = orderInput.nextDouble();
 
             System.out.println("\nInput your second order: ");
             String scndyourOrder = orderInput.next();
-            System.out.println("Input the price of your second order: ");
+            System.out.println("\nInput the price of your second order: ");
             Double scndorderprice = orderInput.nextDouble();
 
             System.out.println("\nInput your third order: ");
             String thirdyourOrder = orderInput.next();
-            System.out.println("Input the price of your third order: ");
+            System.out.println("\nInput the price of your third order: ");
             Double thrdorderprice = orderInput.nextDouble();
         
             Double totalAmount = frstorderprice + scndorderprice + thrdorderprice;
 
             System.out.println("\nYour orders are: " + frstOrder + ", " + scndyourOrder + " " + thirdyourOrder);
-            System.out.println("\nThe Total amount of your order: " + totalAmount);
+            System.out.println("\nThe Total amount of your order: " + totalAmount + "\n");
     }
 
 }
