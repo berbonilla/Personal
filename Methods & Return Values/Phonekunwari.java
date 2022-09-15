@@ -7,8 +7,7 @@ public class App {
         System.out.println("1-Multiply 2 Digits || 2-Divide 2 Digits || 3-Crush Reveal || 4-Order a Meal");
         System.out.println("\nInput what you want to do: \n");
         int choiceOp = opInput.nextInt();
-        
-        
+       
     if (choiceOp == 1){
 
         int product = multiply();
