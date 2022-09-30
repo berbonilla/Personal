@@ -6,7 +6,7 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 void setup() {
 
-  lcd.be gin(16,2);
+  lcd.begin(16,2);
 
   lcd.print("  hello, world!");
  
