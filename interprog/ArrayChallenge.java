@@ -3,7 +3,7 @@ import java.util.*;
 public class ArrayChallenge {
 	// Instantiation
     static Scanner sc = new Scanner(System.in);
-    static int checkVal = 0;
+    
     // Array initialization
     static int array[] = { 15, 30, 25, 19, 30, 40 }; 
 
@@ -41,15 +41,15 @@ public class ArrayChallenge {
                                                  
     // Array Value Checker Method
     static boolean checker() {              
-   
+        int checkVal = 0;
 		for (int j = 0; j < array.length; j++) {
 			if (array[j] != 0) {
 				continue;
 			} else {
-				noValueCounter++;
+				checkVal++;
 			}
 		}
-        if (noValueCounter == 6) {
+        if (checkVal == 6) {
             return true;
         }
         else {
