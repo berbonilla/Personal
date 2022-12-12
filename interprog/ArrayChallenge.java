@@ -1,53 +1,59 @@
 import java.util.*;
+
 public class ArrayChallenge {
-
-    public static Scanner sc = new Scanner(System.in);
-    public static int array[] = {15,30,25,19,30,40};                  // Array initialization
-    public static int length = array.length;
-    public static int check,sum = 0,i = 0;
-
-    public static void checker() {
-        for ( i = 0;i <= length-2;i++) {    
-            System.out.print("Element you want to delete: "); 
-
-            int num = sc.nextInt();                         // Data input
-
-                for (int j = 0; j < array.length;j++) {     //
-                    if ( num == array[j]) {                 // Checks if the input value is in the array
-                        array[j] = 0;                       // If the input value is found in the array, 
-                    }                                       // "array[j] = 0" converts the value inside the index to zer
-
-                }                                           
-
-            for (int x = 0; x < array.length;x++) {         // 
-                if (array[x] != 0) {                        // Loop for printing the 
-                    System.out.print(array[x] + " ");       // non-zero index values 
-                }                                           // in the array
-            }                                               //
-            System.out.println(" ");
-
-        }
-
-    }
+	// Instantiation
+    static Scanner sc = new Scanner(System.in);
+    static int checkVal = 0;
+    // Array initialization
+    static int array[] = { 15, 30, 25, 19, 30, 40 }; 
 
     public static void main(String[] args) {
+        printOut();
+        														//
+        while (!checker()) {									// Using a while loop, this line of code
+            System.out.print("Element you want to delete: ");	// removes the element's components.
+            int inVal = sc.nextInt();           				// This code is input for data.
+                    											//
+            findVal(inVal);
+            printOut();
+        }														//
+        System.out.println("Array is Empty..");					// If indeed the prerequisites were met.
+    }															//
 
-        System.out.println(Arrays.toString(array));         // Displays initial array
-
-                                                            // Loop for the Array "Deductor" Method
-        checker();                                        // Array Value "Deductor" Method
-                                                            //
-
-        for (int y = 0; y < length;y++) {                    // Loop for adding all the
-            sum += array[y];                                // value in indexes 
-        }                                                    // of the array
-
-        if (sum != 0) {                                        //                 
-            checker();                                        //    If sum is not equal to 0 loop back to checker        
-        }                                                    //
-
-        else {                                                // 
-            System.out.println("Array is empty.. ");        // Else end program
-        }                                                    //
+    // Array Value Printer Method
+    static void printOut() {                      				
+        for (int x = 0; x < array.length; x++) {  				//
+            if (array[x] != 0) {                  				// These lines of code print the array's 
+                System.out.print(array[x] + " "); 				// non-zero index values by 
+            }                                     				// iterating through them.
+        }                                         				//
+        System.out.println(" ");                  
     }
+
+    // Array Value "Deductor" Method
+    static void findVal(int inVal){                				//
+        for (int j = 0; j < array.length; j++) {   				// This sections of code determines whether the
+            if (inVal == array[j]) {               				// input value is present in the array. 
+                array[j] = 0;                      				// "array[j] = 0" transforms the value within
+            }                                      				// the index to zero if the input value
+        }                                          				// is found in the array.
+    }                                              				//
+                                                 
+    // Array Value Checker Method
+    static boolean checker() {              
+   
+		for (int j = 0; j < array.length; j++) {
+			if (array[j] != 0) {
+				continue;
+			} else {
+				noValueCounter++;
+			}
+		}
+        if (noValueCounter == 6) {
+            return true;
+        }
+        else {
+            return false;
+        }
+	}
 }
