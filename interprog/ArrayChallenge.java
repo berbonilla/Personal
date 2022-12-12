@@ -19,6 +19,7 @@ public class ArrayChallenge {
         System.out.println("Array is Empty..");
     }
 
+    //
     static void printOut() {
         for (int x = 0; x < array.length; x++) {  //
             if (array[x] != 0) {                  // Loop for printing the
